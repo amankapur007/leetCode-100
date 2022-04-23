@@ -3,3 +3,4 @@
 1. Mid Element
 2. Reverse List
 3. Palindrome
+4. Fold Linked List

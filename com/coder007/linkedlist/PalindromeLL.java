@@ -10,21 +10,22 @@ import java.util.Scanner;
  */
 public class PalindromeLL {
     public static void main(String[] args) {
-        Scanner sc =  new Scanner(System.in);5
-        int n =  sc.nextInt();
-        ListNode dummy =  new ListNode(-1);
-        ListNode temp = dummy;
-        while(n!=0){
-            int data = sc.nextInt();
-            temp.next = new ListNode(data);
-            temp = temp.next;
-            n--;
-        }
-        ListNode.display(dummy.next);
-        if(palindrome(dummy.next)){
-            System.out.println("Palindrome");
-        }else{
-            System.out.println("Not a palindrome");
+        try (Scanner sc = new Scanner(System.in)) {
+            int n =  sc.nextInt();
+            ListNode dummy =  new ListNode(-1);
+            ListNode temp = dummy;
+            while(n!=0){
+                int data = sc.nextInt();
+                temp.next = new ListNode(data);
+                temp = temp.next;
+                n--;
+            }
+            ListNode.display(dummy.next);
+            if(palindrome(dummy.next)){
+                System.out.println("Palindrome");
+            }else{
+                System.out.println("Not a palindrome");
+            }
         }
     }
 
